@@ -1,5 +1,7 @@
 # Tharunkaarthik Gopinath — Portfolio
 
+**Live:** [tharungopinath.com](https://tharungopinath.com)
+
 A minimalistic, dark-themed developer portfolio built with **Next.js**, **React**, **Tailwind CSS**, and a **Node.js + Express** backend serving resume data as a REST API.
 
 ## Stack
