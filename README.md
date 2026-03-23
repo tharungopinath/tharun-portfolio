@@ -87,10 +87,6 @@ npm run dev   # http://localhost:3000
 
 ## Customization
 
-### Update your info
-Edit `portfolio-build/backend/data/resumeData.js` — all content lives there.
-Also update the fallback data in `portfolio-build/frontend/pages/api/resume.js` to keep them in sync.
-
 ### Theme colors
 Colors are defined in `portfolio-build/frontend/tailwind.config.js` and `portfolio-build/frontend/styles/globals.css`.
 
