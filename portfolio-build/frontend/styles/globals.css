@@ -264,3 +264,95 @@ section:last-child { border-bottom: none; }
 .reveal { opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
 .reveal.in { opacity: 1; transform: none; }
 .stat-val[data-target] { transition: color .3s; }
+
+/* ── Mobile nav ─────────────────────────────────────────────────── */
+.mobile-header { display: none; }
+
+.mobile-overlay {
+  display: none;
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(0,0,0,.6); backdrop-filter: blur(4px);
+}
+.mobile-drawer {
+  position: absolute; top: 49px; left: 0; right: 0;
+  background: var(--bg); border-bottom: 1px solid var(--border);
+  padding: 16px 20px 20px;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.mobile-nav-items { display: flex; flex-direction: column; gap: 1px; }
+.mobile-nav-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 9px 10px; border-radius: 5px;
+  color: var(--muted); text-decoration: none;
+  font-family: 'JetBrains Mono', monospace; font-size: 12px;
+  transition: color .2s, background .2s;
+}
+.mobile-nav-item:hover,
+.mobile-nav-item.active { color: var(--text); background: var(--faint); }
+.mobile-nav-item.active .nav-num { color: var(--accent); }
+.mobile-nav-item .nav-num { font-size: 9px; color: var(--muted); opacity: .6; }
+.mobile-nav-item .nav-label { font-size: 12px; }
+.mobile-drawer-actions { display: flex; flex-direction: column; gap: 6px; padding-top: 12px; border-top: 1px solid var(--border); }
+
+/* Hamburger */
+.mobile-hamburger {
+  background: none; border: 1px solid var(--border); border-radius: 4px;
+  padding: 6px 8px; cursor: pointer;
+  display: flex; flex-direction: column; gap: 4px; align-items: center; justify-content: center;
+  transition: border-color .2s;
+}
+.mobile-hamburger:hover { border-color: var(--accent); }
+.ham-line {
+  display: block; width: 16px; height: 1px;
+  background: var(--muted); border-radius: 1px;
+  transition: background .2s;
+}
+.mobile-hamburger:hover .ham-line,
+.ham-line.open { background: var(--accent); }
+
+/* ── Mobile ─────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  html, body { overflow: auto; }
+  #__next { flex-direction: column; overflow: auto; }
+
+  .mobile-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 20px; height: 49px;
+    background: var(--bg); border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; z-index: 100;
+  }
+  .mobile-name { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; }
+  .mobile-first { color: var(--text); }
+  .mobile-last  { color: var(--accent); }
+  .mobile-overlay { display: block; }
+
+  /* Hide sidebar */
+  .sidebar { display: none; }
+
+  /* Main fills full width and scrolls naturally */
+  .main { height: auto; overflow-y: visible; }
+
+  /* Sections */
+  section { padding: 48px 20px; }
+  .footer { padding: 20px; }
+
+  /* Hero: single column, no tech cloud */
+  #about { grid-template-columns: 1fr; gap: 0; padding: 48px 20px; min-height: auto; }
+  .hero-right { display: none; }
+
+  /* Stats grid: 2 cols still works, just smaller */
+  .stats-grid { margin-bottom: 24px; }
+  .stat-val { font-size: 20px; }
+
+  /* Experience: stack period below content */
+  .exp-item { grid-template-columns: 1fr; gap: 4px; }
+  .exp-period { text-align: left; }
+
+  /* Projects: detail padding */
+  .project-detail { padding-left: 12px; }
+
+  /* Skills: stack category above pills */
+  .skills-table td { display: block; }
+  .skill-cat { width: 100%; padding-bottom: 8px; }
+  .skill-items { padding-left: 0; }
+}

@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import Head from 'next/head';
 import Loader from '@/components/Loader';
 import Sidebar from '@/components/Sidebar';
+import MobileNav from '@/components/MobileNav';
 import ResumeModal from '@/components/ResumeModal';
 import Hero from '@/components/Hero';
 import Projects from '@/components/Projects';
@@ -161,6 +162,13 @@ export default function Home() {
       <ResumeModal open={modalOpen} onClose={() => setModalOpen(false)} />
 
       <Sidebar
+        activeSection={activeSection}
+        onNavClick={handleNavClick}
+        onOpenResume={() => setModalOpen(true)}
+        onToggleTheme={toggleTheme}
+        theme={theme}
+      />
+      <MobileNav
         activeSection={activeSection}
         onNavClick={handleNavClick}
         onOpenResume={() => setModalOpen(true)}
