@@ -14,6 +14,14 @@ import Contact from '@/components/Contact';
 export default function Home() {
   const [theme, setTheme] = useState('dark');
   const [modalOpen, setModalOpen] = useState(false);
+
+  const handleOpenResume = () => {
+    if (window.innerWidth < 768) {
+      window.open('/resume.pdf', '_blank');
+    } else {
+      setModalOpen(true);
+    }
+  };
   const [activeSection, setActiveSection] = useState('about');
   const mainRef = useRef(null);
 
@@ -164,20 +172,20 @@ export default function Home() {
       <Sidebar
         activeSection={activeSection}
         onNavClick={handleNavClick}
-        onOpenResume={() => setModalOpen(true)}
+        onOpenResume={handleOpenResume}
         onToggleTheme={toggleTheme}
         theme={theme}
       />
       <MobileNav
         activeSection={activeSection}
         onNavClick={handleNavClick}
-        onOpenResume={() => setModalOpen(true)}
+        onOpenResume={handleOpenResume}
         onToggleTheme={toggleTheme}
         theme={theme}
       />
 
       <main className="main" id="main-scroll" ref={mainRef}>
-        <Hero onOpenResume={() => setModalOpen(true)} />
+        <Hero onOpenResume={handleOpenResume} />
         <Projects />
         <Skills />
         <Experience />
