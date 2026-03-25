@@ -28,6 +28,20 @@ const resumeData = {
   ],
   projects: [
     {
+      name: "DocuBridge",
+      tech: ["Java", "JavaFX", "Quill.js", "WebSocket", "Azure SQL"],
+      date: "Mar 2026",
+      github: "https://github.com/KoleoshoNifemi/DocuBridge-",
+      description:
+        "Real-time collaborative desktop word processor with delta-based sync, Azure SQL persistence, and .docx export — built for simultaneous multi-user editing.",
+      highlights: [
+        "Delta-based sync via Quill.js operational transform with an 80ms polling loop for near-real-time collaboration",
+        "Bridged JavaFX WebView and Java backend for clipboard ops, Find & Replace, and .docx import/export via Apache POI",
+        "Integrated Azure SQL Server for persistent storage with BCrypt-secured auth and 5-second auto-save",
+      ],
+      group: true,
+    },
+    {
       name: "Model Router AI",
       tech: ["Python", "FastAPI", "JavaScript", "HTML/CSS"],
       date: "Feb 2026",
@@ -54,16 +68,16 @@ const resumeData = {
       ],
     },
     {
-      name: "Java Math Game",
-      tech: ["Java", "Swing API"],
-      date: "Oct 2025",
-      github: "https://github.com/tharunkaarthik/java-math-game",
+      name: "WrdGuess",
+      tech: ["Python", "Tkinter", "Pillow", "Docker"],
+      date: "Nov 2024",
+      github: "https://github.com/tharungopinath/WrdGuess",
       description:
-        "Modular, event-driven desktop application with multiple game modes, local multiplayer, and leaderboard system.",
+        "Graphical Wordle recreation built in Python — six attempts to guess a five-letter word with color-coded tile and keyboard feedback.",
       highlights: [
-        "Built with Java Swing and CardLayout for multi-screen navigation (start, setup, gameplay, summary)",
-        "Implemented timed, sudden-death, lives-based, and custom-length game modes with full state management",
-        "Designed local multiplayer with leaderboard sorting using custom Comparators",
+        "Full Tkinter GUI with centered window, letter input, and on-screen keyboard tracker",
+        "Real-time tile updates with green/yellow/gray feedback validated against a 5-letter dictionary",
+        "Win/loss screens with custom icon assets, Pillow image rendering, and Play Again flow",
       ],
     },
   ],

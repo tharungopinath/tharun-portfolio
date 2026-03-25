@@ -3,6 +3,26 @@ import { useState, useEffect, useRef } from 'react';
 const PROJECTS = [
   {
     num: '01',
+    name: 'DocuBridge',
+    desc: 'Real-time collaborative desktop word processor with delta-based sync, Azure SQL persistence, and .docx export - built for simultaneous multi-user editing.',
+    highlights: [
+      'Delta-based sync via Quill.js operational transform with an 80ms polling loop for near-real-time collaboration',
+      'Bridged JavaFX WebView and Java backend for clipboard ops, Find & Replace, and .docx import/export via Apache POI',
+      'Integrated Azure SQL Server for persistent storage with BCrypt-secured auth and 5-second auto-save',
+    ],
+    tags: [
+      { label: 'Java', accent: true },
+      { label: 'JavaFX' },
+      { label: 'Quill.js' },
+      { label: 'WebSocket' },
+      { label: 'Azure SQL' },
+      { label: 'Apache POI' },
+      { label: 'team project', dim: true },
+    ],
+    github: 'https://github.com/KoleoshoNifemi/DocuBridge-',
+  },
+  {
+    num: '02',
     name: 'Model Router AI',
     desc: 'Real-time LLM routing dashboard with SSE streaming - visualizes routing decisions, confidence scores, latency, and escalation state across model tiers.',
     highlights: [
@@ -21,7 +41,7 @@ const PROJECTS = [
     live: 'https://model-router-ai-five.vercel.app/',
   },
   {
-    num: '02',
+    num: '03',
     name: 'Emplates Chrome Extension',
     desc: 'Chrome extension with 50+ installs and 5-star rating - injects reusable email templates into Gmail and Outlook using MutationObserver for SPA compatibility.',
     highlights: [
@@ -37,22 +57,6 @@ const PROJECTS = [
     ],
     github: 'https://github.com/tharungopinath/emplates_chrome_extension',
     live: 'https://chromewebstore.google.com/detail/ffjcgkbendaloplpegdielmjhanlcleh?utm_source=item-share-cb',
-  },
-  {
-    num: '03',
-    name: 'Java Math Game',
-    desc: 'Modular desktop application with timed, sudden-death, and lives-based game modes, local multiplayer, and leaderboard via custom Comparators.',
-    highlights: [
-      'Java Swing + CardLayout for multi-screen navigation',
-      'javax.swing.Timer for timed gameplay without blocking the UI thread',
-      'Custom Comparators for leaderboard sorting',
-    ],
-    tags: [
-      { label: 'Java', accent: true },
-      { label: 'Swing API' },
-      { label: 'CardLayout' },
-    ],
-    github: 'https://github.com/tharungopinath/java_math_game',
   },
   {
     num: '04',
