@@ -35,11 +35,11 @@ const fallbackData = {
   projects: [
     {
       name: "DocuBridge",
-      tech: ["Java", "JavaFX", "Quill.js", "WebSocket", "Azure SQL", "Azure Cognitive Services"],
+      tech: ["Java", "JavaFX", "Quill.js", "WebSocket", "Azure SQL", "Azure Translator"],
       date: "Mar 2026",
       github: "https://github.com/KoleoshoNifemi/DocuBridge-",
       description:
-        "Collaborative desktop word processor with live in-editor translation across 5 languages, real-time multi-user editing over WebSocket, and Azure SQL persistence — built in JavaFX with a Quill.js rich text editor.",
+        "Collaborative desktop word processor with live in-editor translation across 5 languages, real-time multi-user editing over WebSocket, and Azure SQL persistence. Built in JavaFX with a Quill.js rich text editor.",
       highlights: [
         "Embedded Quill.js rich text editor in a JavaFX WebView, bridging Java and JavaScript for formatting and clipboard operations",
         "Integrated live in-editor translation across 5 languages via Azure Cognitive Services Translator v3, preserving rich text through a dual-delta sync architecture",

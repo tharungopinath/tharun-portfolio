@@ -4,11 +4,12 @@ const PROJECTS = [
   {
     num: '01',
     name: 'DocuBridge',
-    desc: 'Real-time collaborative desktop word processor with delta-based sync, Azure SQL persistence, and .docx export - built for simultaneous multi-user editing.',
+    desc: 'Collaborative desktop word processor with live in-editor translation across 5 languages, real-time multi-user editing over WebSocket, and Azure SQL persistence. Built in JavaFX with a Quill.js rich text editor.',
     highlights: [
-      'Delta-based sync via Quill.js operational transform with an 80ms polling loop for near-real-time collaboration',
-      'Bridged JavaFX WebView and Java backend for clipboard ops, Find & Replace, and .docx import/export via Apache POI',
-      'Integrated Azure SQL Server for persistent storage with BCrypt-secured auth and 5-second auto-save',
+      'Embedded Quill.js rich text editor in a JavaFX WebView, bridging Java and JavaScript for formatting and clipboard operations',
+      'Integrated live in-editor translation across 5 languages via Azure Cognitive Services Translator v3, preserving rich text through a dual-delta sync architecture',
+      'Engineered real-time multi-user editing over WebSocket using Quill\'s delta protocol with ~80ms sync latency and cross-network support via ngrok',
+      'Azure SQL Server for cloud-backed auth (BCrypt + JDBC prepared statements) and per-user document storage',
     ],
     tags: [
       { label: 'Java', accent: true },
@@ -16,7 +17,7 @@ const PROJECTS = [
       { label: 'Quill.js' },
       { label: 'WebSocket' },
       { label: 'Azure SQL' },
-      { label: 'Apache POI' },
+      { label: 'Azure Translator' },
       { label: 'team project', dim: true },
     ],
     github: 'https://github.com/KoleoshoNifemi/DocuBridge-',
